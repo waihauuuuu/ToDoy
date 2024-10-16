@@ -1,0 +1,31 @@
+
+/*Light Mode*/
+#vboxTaskContainer.vbox-light-mode{
+    -fx-background-color: #fbfbfb;
+    -fx-background-radius: 12;
+    -fx-background-insets: -7;
+}
+
+#sclTaskList.scl-light-mode{
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-background-color: #fbfbfb;
+    -fx-border-color: #DCDCDC;
+    -fx-border-width: 4;
+}
+
+/*Dark mode*/
+#vboxTaskContainer.vbox-dark-mode{
+    -fx-background-color: #3F3F3F;
+    -fx-background-radius: 10;
+    -fx-background-insets: -7; /* Set background insets to 0 to remove the extra spacing */
+}
+
+#sclTaskList.scl-dark-mode{
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-background-color: #3F3F3F;
+    -fx-border-color: #2B2D31;
+    -fx-border-width: 4;
+}
+
