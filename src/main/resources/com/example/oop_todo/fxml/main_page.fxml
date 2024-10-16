@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPane" prefHeight="540.0" prefWidth="902.0" stylesheets="@../CSS/main.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.oop_todo.Controller.Controller">
+    <children>
+        <BorderPane fx:id="borderPane" prefHeight="586.0" prefWidth="902.0" stylesheets="@../CSS/main.css">
+            <left>
+                <VBox fx:id="vboxSide" prefHeight="547.0" prefWidth="216.0" stylesheets="@../CSS/main.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="btnMode" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onClickSwitchMode" prefHeight="42.0" prefWidth="40.0" translateX="150.0" translateY="25.0">
+                            <graphic>
+                                <ImageView fx:id="imgMode" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/dark(in_light).png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnToday" alignment="BASELINE_LEFT" graphicTextGap="25.0" mnemonicParsing="false" onAction="#onClickSideBarButton" prefHeight="52.0" prefWidth="242.0" stylesheets="@../CSS/main.css" text="Today" textFill="#515151" translateY="55.0">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/today.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnImportant" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickSideBarButton" prefHeight="52.0" prefWidth="263.0" stylesheets="@../CSS/main.css" text="Important" textFill="#979797" translateY="55.0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/important.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnPrevious" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="62.0" mnemonicParsing="false" onAction="#onClickSideBarButton" prefHeight="52.0" prefWidth="258.0" stylesheets="@../CSS/main.css" text="Previous" textFill="#979797" translateY="55.0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/previous.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnSomeday" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickSideBarButton" prefHeight="52.0" prefWidth="240.0" stylesheets="@../CSS/main.css" text="Someday" textFill="#979797" translateY="55.0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/someday.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnTrash" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="166.0" mnemonicParsing="false" onAction="#onClickSideBarButton" prefHeight="52.0" prefWidth="243.0" stylesheets="@../CSS/main.css" text="Trash" textFill="#979797" translateY="55.0">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/light_mode/trash.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <padding>
+                                <Insets left="30.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnAddTask" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickAddNewTask" prefHeight="58.0" prefWidth="188.0" stylesheets="@../CSS/main.css" text="Add &#10;Task" textFill="#6c63ff" translateX="15.0" translateY="145.0">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <graphic>
+                                <ImageView fitHeight="60.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0" translateY="-1.0">
+                                    <image>
+                                        <Image url="@../icons/add.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </VBox>
+            </left>
+            <top>
+                <VBox fx:id="vboxAppBar" alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="768.0" stylesheets="@../CSS/main.css" BorderPane.alignment="CENTER">
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX">
+                            <color>
+                                <Color opacity="0.0" />
+                            </color></DropShadow>
+                    </effect>
+                    <children>
+                        <GridPane prefHeight="25.0" prefWidth="870.0" stylesheets="@../CSS/main.css">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.4000244140625" minWidth="10.0" prefWidth="439.19996337890626" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="777.4000244140625" minWidth="10.0" prefWidth="386.2000488281249" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="430.20001220703125" minWidth="10.0" prefWidth="49.399951171875045" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="5.599996948242188" minHeight="3.9999901890754703" prefHeight="3.9999901890754703" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="20.799999999999997" minHeight="10.0" prefHeight="18.8666711807251" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="9.599989891052244" minHeight="0.0" prefHeight="0.7333288192749023" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="6.5999979019165025" minHeight="1.8000101089477525" prefHeight="3.400000953674315" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <ImageView fitHeight="30.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                    <image>
+                                        <Image url="@../icons/ToDoy(puppy).png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="lblToDoy" contentDisplay="RIGHT" prefHeight="26.0" prefWidth="60.0" text="ToDoy" textFill="#6c63ff" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnClose" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="9.0" minWidth="9.0" mnemonicParsing="false" onAction="#onClickTerminateProgram" prefHeight="15.0" prefWidth="16.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: #FF605c;" translateX="35.0" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="7.0" />
+                                    </font>
+                           <graphic>
+                              <ImageView fx:id="imgClose" fitHeight="11.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" translateY="0.5" visible="false">
+                                 <image>
+                                    <Image url="@../icons/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                                </Button>
+                                <Button fx:id="btnMin" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="9.0" minWidth="9.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="16.0" style="-fx-background-radius: 100; -fx-background-color: #FFBD44; -fx-border-image-width: 1;" translateX="65.5" translateY="0.5" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="7.0" />
+                                    </font>
+                           <graphic>
+                              <ImageView fx:id="imgMin" fitHeight="11.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" translateY="1.0" visible="false">
+                                 <image>
+                                    <Image url="@../icons/minimize.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                                </Button>
+                                <Button fx:id="btnMax" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="9.0" minWidth="9.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="16.0" style="-fx-background-radius: 100; -fx-border-radius: 100; -fx-background-color: #00CA4E;" translateX="95.0" translateY="0.5" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font size="7.0" />
+                                    </font>
+                           <graphic>
+                              <ImageView fx:id="imgMax" fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" translateX="-1.0" visible="false">
+                                 <image>
+                                    <Image url="@../icons/maximize.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                                </Button>
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </top>
+            <center>
+                <VBox fx:id="vboxInner" prefHeight="534.0" prefWidth="686.0" stylesheets="@../CSS/main.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <GridPane prefHeight="80.0" prefWidth="668.0" stylesheets="@../CSS/main.css">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="42.400003051757814" minHeight="10.0" prefHeight="20.799999999999997" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="59.2" minHeight="10.0" prefHeight="54.39999694824219" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <ProgressBar fx:id="progressBar" prefHeight="26.0" prefWidth="248.0" progress="0.0" style="-fx-border-radius: 100;" stylesheets="@../CSS/main.css" translateX="310.0" GridPane.rowIndex="1" />
+                                <Label fx:id="lblTitle" alignment="TOP_LEFT" prefHeight="58.0" prefWidth="268.0" stylesheets="@../CSS/main.css" text="Today" translateX="50.0" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="40.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="lblProgress" prefHeight="30.0" prefWidth="85.0" stylesheets="@../CSS/main.css" text="0.0%" textFill="#6c63ff" translateX="570.0" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnClear" contentDisplay="RIGHT" graphicTextGap="5.0" mnemonicParsing="false" onAction="#onClickButtonClear" prefHeight="30.0" prefWidth="127.0" stylesheets="@../CSS/main.css" text="Clear" translateX="490.0" visible="false" GridPane.rowIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fx:id="imgClear" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/clear.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <effect>
+                                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                                    </effect>
+                                </Button>
+                            </children>
+                        </GridPane>
+                        <GridPane alignment="CENTER" prefHeight="488.0" prefWidth="552.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <ScrollPane fx:id="sclTaskList" hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="418.0" prefWidth="628.0" styleClass="scl-light-mode" stylesheets="@../CSS/CustomScrollPane.css" translateX="27.0">
+                                    <content>
+                                        <VBox fx:id="vboxTaskContainer" prefHeight="402.0" prefWidth="613.0" styleClass="vbox-light-mode" stylesheets="@../CSS/main.css" translateX="4.0" translateY="5.0" />
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

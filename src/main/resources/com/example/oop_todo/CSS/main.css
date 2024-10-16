@@ -1,0 +1,90 @@
+.progress-bar .bar {
+    -fx-border-color: #6c63ff;
+    -fx-border-width: 2; /* Adjust the width as needed */
+    -fx-border-radius: 50; /* Assuming you want a circular border */
+    -fx-stroke-type: inside; /* Draw the stroke inside the region */
+
+    -fx-background-color:
+        -fx-box-border,
+        linear-gradient(to bottom, derive(-fx-accent,95%), derive(-fx-accent,10%)),
+        #6c63ff; /* this line is the background color of the bar */
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+    -fx-background-radius: 50;
+}
+
+.progress-bar .track {
+    -fx-background-radius: 50;
+    -fx-background-color: #D9D9D9;
+}
+
+#btnToday, #btnImportant, #btnPrevious, #btnSomeday, #btnTrash, #btnAddTask {
+    -fx-background-color: #e5e5e5;
+}
+
+#btnToday:hover, #btnImportant:hover, #btnPrevious:hover, #btnSomeday:hover, #btnTrash:hover, #btnAddTask:hover {
+    -fx-background-color: #d1cfd1;
+}
+
+#btnClear{
+    -fx-background-radius: 100;
+    -fx-background-color: #e5e5e5;
+}
+
+#btnMode {
+    -fx-background-radius: 100%;
+    -fx-background-color: #f5f5f5;
+}
+
+#vboxAppBar, #vboxFormAppBar{
+    -fx-background-color: #DCDCDC;
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-radius: 12 12 0 0;
+}
+
+#vboxSide{
+    -fx-background-color: #e5e5e5;
+    -fx-background-radius: 0 0 0 12;
+    -fx-border-radius: 0 0 0 12;
+}
+
+#vboxInner{
+    -fx-background-radius: 0 0 12 0;
+    -fx-border-radius: 0 0 12 0;
+}
+
+#borderPane{
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+}
+
+#parentPane {
+    -fx-background-color: #f4f1f1;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+/*
+#btnClose, #btnCloseOnForm{
+    -fx-background-color: #FF605c;
+}
+
+#btnMin{
+    -fx-background-color: #FFBD44;
+}
+
+#btnMax{
+    -fx-background-color: #00CA4E;
+}
+
+#btnClose, #btnMin, #btnMax, #btnCloseOnForm{
+    -fx-background-radius: 100%;
+    -fx-border-radius: 100%;
+    -fx-border-width: 1;
+    -fx-border-color: transparent;
+    -fx-border-insets: -1;
+}
+*/
+
+
+

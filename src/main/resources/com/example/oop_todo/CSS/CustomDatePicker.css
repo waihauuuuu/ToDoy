@@ -1,0 +1,153 @@
+* {
+	-fx-primary-color: #6c63ff;
+	-fx-secondary-color: #7c74f7;
+	-fx-hover-color: #9d97f7;
+	-fx-light-grey-color: #d1d1d1;
+
+	-fx-focus-color: -fx-secondary-color;
+}
+
+.dp-light-mode .date-picker{
+    -fx-control-inner-background: #e3e3e3;
+    -fx-background-radius: 5;
+    -fx-border-width: 0;
+    -fx-background-color: #F3F2F0;
+}
+
+/*changing the background of calender icon*/
+.dp-light-mode .date-picker .arrow-button {
+	-fx-background-color: #D9D9D9;
+	-fx-background-radius: 0 5 5 0;
+}
+
+/*changing the color of calender icon*/
+.dp-light-mode .date-picker .arrow-button .arrow {
+    -fx-translate-x: -1;
+    -fx-translate-y: -1;
+    -fx-font-size: 20;
+	-fx-background-color: #837C7C;
+}
+
+.dp-light-mode .date-picker .arrow-button:hover {
+	-fx-background-color: -fx-secondary-color;
+}
+
+.dp-light-mode .date-picker .arrow-button .arrow:hover {
+	-fx-background-color: White;
+}
+
+.dp-light-mode .date-picker .cell { /*change the color of the table cell in date picker*/
+	-fx-background-color: white;
+}
+
+.dp-light-mode .date-picker .cell:hover { /*hover when selecting a cell from date picker*/
+	-fx-background-color: -fx-light-grey-color;
+}
+
+.dp-light-mode .date-picker .cell:focused { /*change the color of cell being selected*/
+	-fx-background-color: -fx-primary-color;
+}
+
+.dp-light-mode .date-picker .selected {
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
+
+.dp-light-mode .date-picker .selected:focused {
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
+
+.dp-light-mode .date-picker-popup {
+	-fx-border-color: transparent;
+}
+
+.dp-light-mode .date-picker-popup .month-year-pane {
+	-fx-background-color: -fx-primary-color;
+}
+
+.dp-light-mode .date-picker-popup .month-year-pane .label {
+	-fx-text-fill: white;
+}
+
+.dp-light-mode .date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+	-fx-background-color: white;
+}
+
+
+/*Dark Mode Style*/
+.dp-dark-mode .date-picker{
+    -fx-control-inner-background: #3F3F3F;
+    -fx-background-radius: 5;
+    -fx-border-width: 0;
+    -fx-background-color: #313338;
+    -fx-border-color: #313338;
+}
+
+/*changing the background of calender icon*/
+.dp-dark-mode .date-picker .arrow-button {
+	-fx-background-color: #818181;
+	-fx-background-radius: 0 5 5 0;
+}
+
+/*changing the color of calender icon*/
+.dp-dark-mode .date-picker .arrow-button .arrow {
+    -fx-translate-x: -1;
+    -fx-translate-y: -1;
+    -fx-font-size: 20;
+	-fx-background-color: white;
+}
+
+.dp-dark-mode .date-picker .arrow-button:hover { /*change the color of calendar box background*/
+	-fx-background-color: -fx-secondary-color;
+}
+
+.dp-dark-mode .date-picker .arrow-button .arrow:hover {
+	-fx-background-color: white;
+}
+
+.dp-dark-mode .date-picker .cell { /*change the color of the table cell in date picker*/
+    -fx-background-color: #313338;
+}
+
+.dp-dark-mode .date-picker .cell:hover { /*hover when selecting a cell from date picker*/
+	-fx-background-color: #191919;
+}
+
+.dp-dark-mode .date-picker .cell:focused { /*change the color of cell being selected*/
+	-fx-background-color: -fx-primary-color;
+}
+
+.dp-dark-mode .date-picker .selected {
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
+
+.dp-dark-mode .date-picker .selected:focused { /*change the color of text of the selected cell*/
+	-fx-background-color: -fx-primary-color;
+	-fx-text-fill: white;
+}
+
+.dp-dark-mode .date-picker-popup {
+	-fx-border-color: transparent;
+}
+
+.dp-dark-mode .date-picker-popup .month-year-pane { /*change the color of background of month-year pane*/
+	-fx-background-color: -fx-primary-color;
+}
+
+.dp-dark-mode .date-picker-popup .month-year-pane .label { /*change the color of month-year text label*/
+	-fx-text-fill: white;
+}
+
+.dp-dark-mode .date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {  /*change the color of arrow to switch month-year*/
+	-fx-background-color: white;
+}
+
+.dp-dark-mode .date-picker-popup .week-header{ /*change the color of week name in header*/
+    -fx-background-color: -fx-secondary-color;
+    -fx-text-fill: white;
+}
+
