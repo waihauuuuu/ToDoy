@@ -12,7 +12,7 @@ In this project, I involved in UI/UX design, frontend and backend development.
 ![SceneBuilder](https://img.shields.io/badge/SceneBuilder-%234A4B4D.svg?logo=java&logoColor=white) 
 ![CSS](https://img.shields.io/badge/CSS-%231572B6.svg?logo=css3&logoColor=white) 
 ![CSV](https://img.shields.io/badge/CSV-%232F7A3D.svg?logo=csv&logoColor=white) 
-[![Figma](https://img.shields.io/badge/Figma-%23324E88.svg?logo=figma&logoColor=white)](https://www.figma.com/design/bKT93WWrwuQr0W70PSjvl4/ToDoy---ToDoListApplication?node-id=0-1&t=WJ2kO5IXxrCGImxo-1)
+[![Figma](https://img.shields.io/badge/Figma-%23324E88.svg?logo=figma&logoColor=white)](https://www.figma.com/design/bKT93WWrwuQr0W70PSjvl4/ToDoy---ToDoListApplication?node-id=0-1&t=WJ2kO5IXxrCGImxo-1) <-- Click Me
 
 ## 🤝 Collaborator:
 1. [@DariusShin](https://github.com/DariusShin)
